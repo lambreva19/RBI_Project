@@ -46,8 +46,6 @@ public class apiSteps {
 
     @Step("Verify the user salary {0}")
     public void verifyTitle(String expectedTitle) {
-        JSONObject ja = new JSONObject();
-        System.out.println( ja);
         SerenityRest.restAssuredThat(response -> response.body("title", equalTo(expectedTitle)));
     }
 }
